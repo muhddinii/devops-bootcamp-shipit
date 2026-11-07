@@ -18,6 +18,7 @@ jobs:
       - run: npm clean-install
       - run: npm run test
       - run: bash scripts/report.sh
+        continue-on-error: true
         env:
           BOARD_URL: ${{ vars.BOARD_URL }}
           SHIPIT_TOKEN: ${{ secrets.SHIPIT_TOKEN }}
